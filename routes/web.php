@@ -13,5 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/{any}', 'SpaController@index')->where('any', '.*');
+Route::get('/admin', \App\Http\Controllers\AdminController::class);
+
+//Route::get('/{any}', 'SpaController@index')->where('any', '.*');
 
