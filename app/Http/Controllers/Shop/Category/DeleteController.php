@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Shop\Category;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class ShowController extends Controller
+class DeleteController extends Controller
 {
     public function __invoke()
     {
