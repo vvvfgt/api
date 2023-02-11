@@ -13,7 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/admin', \App\Http\Controllers\AdminController::class);
-
 //Route::get('/{any}', 'SpaController@index')->where('any', '.*');
+
+Route::get('/', \App\Http\Controllers\Shop\Main\IndexController::class)->name('main.index');
+
 
