@@ -193,7 +193,7 @@
     </div>
     <!-- /.content-wrapper -->
     <footer class="main-footer">
-        <strong>Copyright &copy; 2014-{{ now()->year }} <a href="{{ route('main.index') }}">Магазинчик</a>.</strong>
+        <strong>Copyright &copy; 2014-{{ now()->year }} <a href="{{ route('shop.main.index') }}">Магазинчик</a>.</strong>
         All rights reserved.
     </footer>
 

@@ -1,4 +1,4 @@
-@extends('layouts.main')
+@extends('shop.layouts.main')
 
 @section('content')
     <!-- Content Header (Page header) -->
