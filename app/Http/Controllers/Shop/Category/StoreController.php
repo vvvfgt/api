@@ -14,6 +14,6 @@ class StoreController extends Controller
         $data = $request->validated();
         Category::firstOrCreate($data);
 
-        return redirect()->route('shop.category.index');
+        return redirect()->route('category.index');
     }
 }

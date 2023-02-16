@@ -1,15 +1,11 @@
 <?php
 
-namespace App\Models\Shop;
+namespace App\Models\Service;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Category extends Model
+class Application extends Model
 {
     use HasFactory;
-
-    protected $fillable = [
-        'title',
-    ];
 }

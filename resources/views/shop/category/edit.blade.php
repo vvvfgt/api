@@ -23,7 +23,17 @@
         <div class="container-fluid">
             <!-- Small boxes (Stat box) -->
             <div class="row">
+                <form action="{{ route('category.update', $category->id) }}" method="post">
+                    @csrf
+                    @method('patch')
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="title" value="{{ $category->title }}" placeholder="Наименование">
+                    </div>
 
+                    <div class="form-group">
+                        <input type="submit" class="btn btn-primary" value="Редактировать">
+                    </div>
+                </form>
             </div>
             <!-- /.row (main row) -->
         </div><!-- /.container-fluid -->
