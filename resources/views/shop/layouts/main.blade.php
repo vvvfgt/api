@@ -160,7 +160,7 @@
                     </li>
 
                     <li class="nav-item">
-                        <a href="pages/gallery.html" class="nav-link">
+                        <a href="{{ route('tag.index') }}" class="nav-link">
                             <i class="nav-icon fas fa-hashtag"></i>
                             <p>Тэги</p>
                         </a>
@@ -184,21 +184,15 @@
                         <a href="#" class="nav-link">
                             <i class="nav-icon fas fa-tree"></i>
                             <p>
-                                Собщения
+                                Сервис
                                 <i class="fas fa-angle-left right"></i>
                             </p>
                         </a>
                         <ul class="nav nav-treeview">
                             <li class="nav-item">
-                                <a href="№" class="nav-link">
+                                <a href="{{ route('applications.index') }}" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
-                                    <p>Все сообщения</p>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="#" class="nav-link">
-                                    <i class="far fa-circle nav-icon"></i>
-                                    <p>Добавить сообщение</p>
+                                    <p>Заявки</p>
                                 </a>
                             </li>
                         </ul>

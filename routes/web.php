@@ -13,8 +13,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-//Route::get('/{any}', 'SpaController@index')->where('any', '.*');
-
 Route::get('/', \App\Http\Controllers\Shop\Main\IndexController::class)->name('shop.main.index');
 
 Route::group(['prefix' => 'categories'], function() {
@@ -27,5 +25,18 @@ Route::group(['prefix' => 'categories'], function() {
     Route::delete('/{category}', \App\Http\Controllers\Shop\Category\DeleteController::class)->name('category.delete');
 });
 
+Route::group(['prefix' => 'tags'], function() {
+    Route::get('/', \App\Http\Controllers\Shop\Tag\IndexController::class)->name('tag.index');
+    Route::get('/create', \App\Http\Controllers\Shop\Tag\CreateController::class)->name('tag.create');
+    Route::post('/', \App\Http\Controllers\Shop\Tag\StoreController::class)->name('tag.store');
+    Route::get('/{tag}/edit', \App\Http\Controllers\Shop\Tag\EditController::class)->name('tag.edit');
+    Route::get('/{tag}', \App\Http\Controllers\Shop\Tag\ShowController::class)->name('tag.show');
+    Route::patch('/{tag}', \App\Http\Controllers\Shop\Tag\UpdateController::class)->name('tag.update');
+    Route::delete('/{tag}', \App\Http\Controllers\Shop\Tag\DeleteController::class)->name('tag.delete');
+});
+
 Route::resource('applications', \App\Http\Controllers\Service\ApplicationController::class );
+Route::resource('colors', \App\Http\Controllers\Color\ColorController::class);
+
+//Route::get('/{any}', 'SpaController@index')->where('any', '.*');
 
