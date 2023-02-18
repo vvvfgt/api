@@ -25,7 +25,7 @@ class ApplicationController extends Controller
     {
         $data = $request->validated();
 
-        Application::create($data);
+        Application::query()->create($data);
 
         return redirect()->route('applications.index');
     }
