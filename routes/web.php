@@ -37,6 +37,7 @@ Route::group(['prefix' => 'tags'], function() {
 
 Route::resource('applications', \App\Http\Controllers\Service\ApplicationController::class );
 Route::resource('color', \App\Http\Controllers\Shop\Color\ColorController::class);
+Route::resource('user', \App\Http\Controllers\Shop\User\UserController::class);
 
 //Route::get('/{any}', 'SpaController@index')->where('any', '.*');
 
